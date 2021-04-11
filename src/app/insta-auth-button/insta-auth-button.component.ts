@@ -9,8 +9,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class InstaAuthButtonComponent implements OnInit {
 
-  private clientId = 286201962879513;
-  private redirectUri = "https://e4059a621d55.ngrok.io/insta-auth"
+  private CLIENT_ID = 286201962879513;
+  private REDIRECT_URL = "https://e4059a621d55.ngrok.io/insta-auth"
 
 
   constructor(private http: HttpClient) { }
@@ -22,8 +22,8 @@ export class InstaAuthButtonComponent implements OnInit {
   authWindow() {
       window.open(
           'https://api.instagram.com/oauth/authorize?'+
-          `client_id=${this.clientId}`+
-          `&redirect_uri=${this.redirectUri}`+
+          `client_id=${this.CLIENT_ID}`+
+          `&redirect_uri=${this.REDIRECT_URL}`+
           '&scope=user_profile,user_media&response_type=code',
         );
   }
