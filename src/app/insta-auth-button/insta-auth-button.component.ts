@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class InstaAuthButtonComponent implements OnInit {
 
   private CLIENT_ID = 286201962879513;
-  private REDIRECT_URL = "https://e4059a621d55.ngrok.io/insta-auth"
+  private REDIRECT_URL = "https://boring-wozniak-d2cbcf.netlify.app/insta-auth"
 
 
   constructor(private http: HttpClient) { }
