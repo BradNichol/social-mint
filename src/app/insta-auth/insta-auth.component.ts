@@ -12,6 +12,13 @@ export class InstaAuthComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {console.log(params)})
+
+    this.route.queryParamMap
+      .subscribe((params) => {
+        this.paramsObject = { ...params.keys, ...params };
+        console.log(this.paramsObject);
+      }
+    );
   }
 
 }
